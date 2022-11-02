@@ -5,6 +5,11 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT,function () {
     console.log("sever is running...");
 });
+// share.api access alt
+app.use(function (req,res,next){
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Allow-Header","Origin, X-Requested-With,Content-Type,Accept");
+})
 // config to connect mysql
 const configDB = {
     host: "139.180.186.20",
