@@ -9,6 +9,7 @@ app.listen(PORT,function () {
 app.use(function (req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Allow-Header","Origin, X-Requested-With,Content-Type,Accept");
+    next();
 })
 // config to connect mysql
 const configDB = {
